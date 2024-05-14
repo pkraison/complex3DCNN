@@ -25,7 +25,7 @@ class ComplexConv3dNet(nn.Module):
         # Output layer to map to real values; adjust as necessary for your task
         # This example uses a simple flattening and linear layer as a placeholder
         self.flatten = lambda x: torch.flatten(x, 1)  # Simplified flattening
-        self.output_layer = nn.Linear(whatever_the_flattened_size_is, output_size)
+        self.output_layer = nn.Linear(12000, output_size)
     
     def forward(self, x):
         # x is a tuple (real_part, imag_part)
